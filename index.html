@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolvia Technologies - The Future of Hospitality with AI</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #e0e7ff;
+            overflow-x: hidden; /* Prevents horizontal scroll on small screens */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem; /* More responsive padding on small screens */
+        }
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+        /* Custom animation for fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Style for the responsive navbar */
+        .mobile-menu-open {
+            display: flex !important;
+        }
+        .bg-gradient-custom {
+            background-image: linear-gradient(to right, #4c4e9c, #1f274a);
+        }
+    </style>
+</head>
+<body class="bg-[#0b0f19] text-[#e0e7ff]">
+
+    <!-- Navbar -->
+    <header class="py-4 sticky top-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md">
+        <div class="container flex items-center justify-between">
+            <a href="#" class="text-3xl font-extrabold text-[#74a5ff]">
+                Evolvia
+            </a>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#services" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Services</a>
+                <a href="#benefits" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Benefits</a>
+                <a href="#why-us" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Why Us</a>
+                <a href="#integrations" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Integrations</a>
+                <a href="#schedule-call" class="px-6 py-2 bg-gradient-custom rounded-full text-white font-semibold shadow-md hover:scale-105 transform transition-transform duration-300">
+                    Schedule a Demo
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden md:hidden flex-col items-center mt-4 space-y-4 text-white text-lg font-medium">
+            <a href="#services" class="hover:text-[#74a5ff] transition-colors duration-300">Services</a>
+            <a href="#benefits" class="hover:text-[#74a5ff] transition-colors duration-300">Benefits</a>
+            <a href="#why-us" class="hover:text-[#74a5ff] transition-colors duration-300">Why Us</a>
+            <a href="#integrations" class="hover:text-[#74a5ff] transition-colors duration-300">Integrations</a>
+            <a href="#schedule-call" class="px-6 py-2 bg-gradient-custom rounded-full text-white font-semibold shadow-md hover:scale-105 transform transition-transform duration-300 w-max">
+                    Schedule a Demo
+                </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 lg:py-32 text-center fade-in">
+            <div class="container">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                    <span class="text-[#74a5ff]">AI Solutions</span> for the Modern Hospitality Experience
+                </h1>
+                <p class="text-base md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto fade-in">
+                    Evolvia Technologies powers your business with intelligent bots that revolutionize guest services, boost efficiency, and drive revenue.
+                </p>
+                <a href="#schedule-call" class="inline-block px-10 py-4 text-lg font-bold text-white bg-gradient-custom rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300">
+                    Schedule a Demo
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-20 bg-[#0f1524] fade-in">
+            <div class="container">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 text-white">Our Suite of AI Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Chatbot Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Digital Concierge Text Chatbot</h3>
+                        <p class="text-gray-300">
+                            A smart, 24/7 chatbot that handles guest inquiries, upsells services, and provides instant information directly from your website, text messaging, and WhatsApp.
+                        </p>
+                    </div>
+
+                    <!-- Voice Bot Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a4 4 0 110-8 4 4 0 010 8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Digital Concierge Voice Bot</h3>
+                        <p class="text-gray-300">
+                            Automate your phone lines with an intelligent voice bot that can handle reservations, answer common questions, and route calls with perfect clarity, available in numerous accents and languages.
+                        </p>
+                    </div>
+
+                    <!-- Web-Bot Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18v-8" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Digital Web-Bot</h3>
+                        <p class="text-gray-300">
+                            Seamlessly integrate our web-bot into your online presence to automate website interactions, guide users, and capture leads with precision.
+                        </p>
+                    </div>
+                    
+                    <!-- Smart Dashboard Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v-4.5m0 0a3 3 0 01-3-3v-2.25M9 12.75l-3 3-3-3" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 6.75v4.5m0 0a3 3 0 013 3v2.25m-3 0l3-3 3 3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Smart Dashboard</h3>
+                        <p class="text-gray-300">
+                            A free tool with all products that provides instant feedback, live insights, and performance summaries of all bot-guest conversations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="py-16 md:py-20 fade-in">
+            <div class="container">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 text-white">Key Benefits</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Benefit 1 -->
+                    <div class="flex flex-col items-center text-center fade-in">
+                        <div class="w-20 h-20 flex items-center justify-center text-5xl text-[#74a5ff]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM21 12c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM3 12c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-4 text-white">Boost Revenue</h3>
+                        <p class="text-gray-400 mt-2">
+                            Upsell rooms, experiences, and services effortlessly to increase your bottom line.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="flex flex-col items-center text-center fade-in">
+                        <div class="w-20 h-20 flex items-center justify-center text-5xl text-[#74a5ff]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75l-4.5-4.5m0 0l4.5-4.5m-4.5 4.5h16.5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-4 text-white">Streamline Operations</h3>
+                        <p class="text-gray-400 mt-2">
+                            Automate FAQs and routine tasks, freeing up your staff to focus on in-person guest interaction.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="flex flex-col items-center text-center fade-in">
+                        <div class="w-20 h-20 flex items-center justify-center text-5xl text-[#74a5ff]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-4 text-white">Enhance Guest Experience</h3>
+                        <p class="text-gray-400 mt-2">
+                            Provide instant, accurate concierge services and information around the clock.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section id="why-us" class="py-16 md:py-20 bg-[#0f1524] fade-in">
+            <div class="container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+                <div class="md:w-1/2 text-left fade-in">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">Tailored Solutions & Personal Touch</h2>
+                    <p class="text-gray-300 text-lg mb-4">
+                        We don't believe in one-size-fits-all. Every Evolvia product is meticulously tailored to fit your business, ensuring a perfect integration and maximum impact.
+                    </p>
+                    <p class="text-gray-300 text-lg mb-4">
+                        Beyond the technology, we provide a personal account manager for every client. This ensures a strong relationship and dedicated support, because we know the human touch is irreplaceable.
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in">
+                    <img src="https://placehold.co/500x300/1e293b/e0e7ff?text=Tailored+Solutions" alt="Customized solutions illustration" class="rounded-3xl shadow-2xl w-full h-auto max-w-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Integrations Section -->
+        <section id="integrations" class="py-16 md:py-20 fade-in">
+            <div class="container text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Seamless Integration</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
+                    Our suite of products integrates seamlessly into all major Property Management Systems (PMS). We are constantly expanding our compatibility to make your business more efficient.
+                </p>
+                <div class="flex justify-center items-center flex-wrap gap-8 md:gap-12 opacity-80">
+                    <img src="https://placehold.co/120x40/4c4e9c/ffffff?text=Oracle+Hospitality" alt="Oracle Hospitality placeholder logo" class="h-10 opacity-70 hover:opacity-100 transition-opacity">
+                    <img src="https://placehold.co/120x40/4c4e9c/ffffff?text=Cloudbeds" alt="Cloudbeds placeholder logo" class="h-10 opacity-70 hover:opacity-100 transition-opacity">
+                    <img src="https://placehold.co/120x40/4c4e9c/ffffff?text=Opera+PMS" alt="Opera PMS placeholder logo" class="h-10 opacity-70 hover:opacity-100 transition-opacity">
+                    <img src="https://placehold.co/120x40/4c4e9c/ffffff?text=And+More..." alt="Placeholder logo for other PMS systems" class="h-10 opacity-70 hover:opacity-100 transition-opacity">
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Call Section -->
+        <section id="schedule-call" class="py-16 md:py-20 bg-[#0f1524] fade-in">
+            <div class="container text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ready to Evolve?</h2>
+                <p class="text-gray-400 text-lg mb-8">
+                    Skip the forms and book a time directly with our team to discuss how Evolvia can transform your guest experience and boost your efficiency.
+                </p>
+                <a href="https://calendly.com/evolviatech/30min" target="_blank" class="inline-block px-10 py-4 text-lg font-bold text-white bg-gradient-custom rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300">
+                    Schedule a Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-gray-400">
+        <div class="container">
+            <p>&copy; 2024 Evolvia Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('mobile-menu-open');
+        });
+
+        // Intersection Observer for fade-in animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2, // Trigger when 20% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Start a bit earlier
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+    </script>
+
+</body>
+</html>
