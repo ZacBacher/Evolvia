@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta Tags -->
-  <meta name="description" content="Evolvia Technologies provides AI chatbot, voice bot, and web-bot solutions for hospitality and other industries. Boost guest experiences, streamline operations, and drive revenue with our tailored AI solutions.">
-  <title>Evolvia Technologies - AI Solutions for Hospitality & Beyond</title>
+  <title>Evolvia Technologies - AI Solutions for Hospitality and Beyond</title>
+  <meta name="description" content="Evolvia Technologies delivers AI-powered solutions including chatbots, voice bots, and automation tools for hospitality and other industries. Enhance customer experience, streamline operations, and unlock efficiency with our innovative AI technologies.">
+  <meta name="keywords" content="AI hospitality, AI chatbot, AI voice bot, AI digital concierge, hotel technology, business automation, AI solutions, Evolvia Technologies">
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://evolvia.co.za/">
-  <meta property="og:title" content="Evolvia Technologies - AI Solutions for Hospitality & Beyond">
-  <meta property="og:description" content="AI chatbots, voice bots, and web-bots for hospitality and other industries. Tailored solutions that enhance guest experience, improve efficiency, and increase revenue.">
+  <meta property="og:title" content="Evolvia Technologies - AI Solutions for Hospitality and Beyond">
+  <meta property="og:description" content="AI chatbots, voice bots, and automation tools designed for hospitality and other industries. Evolvia Technologies helps businesses boost efficiency and deliver exceptional experiences.">
   <meta property="og:image" content="https://zacbacher.github.io/Evolvia/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -21,12 +22,27 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://evolvia.co.za/">
-  <meta property="twitter:title" content="Evolvia Technologies - AI Solutions for Hospitality & Beyond">
-  <meta property="twitter:description" content="AI chatbots, voice bots, and web-bots for hospitality and other industries. Tailored solutions that enhance guest experience, improve efficiency, and increase revenue.">
+  <meta property="twitter:title" content="Evolvia Technologies - AI Solutions for Hospitality and Beyond">
+  <meta property="twitter:description" content="Evolvia Technologies delivers AI chatbots, voice bots, and automation for hospitality and other industries.">
   <meta property="twitter:image" content="https://zacbacher.github.io/Evolvia/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://i.imgur.com/WlkhXLS.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Evolvia Technologies",
+    "url": "https://evolvia.co.za",
+    "logo": "https://zacbacher.github.io/Evolvia/og-image.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/company/evolvia-technologies/"
+    ],
+    "description": "Evolvia Technologies provides AI-powered solutions such as chatbots, voice bots, and automation tools for hospitality and other industries."
+  }
+  </script>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -41,18 +57,19 @@
       font-family: 'Inter', sans-serif;
       background-color: #0b0f19;
       color: #e0e7ff;
-      overflow-x: hidden;
+      overflow-x: hidden; /* Prevents horizontal scroll on small screens */
     }
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 0 1rem; /* More responsive padding on small screens */
     }
     @media (min-width: 768px) {
       .container {
         padding: 0 1.5rem;
       }
     }
+    /* Custom animation for fade-in effect */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -62,6 +79,7 @@
       opacity: 1;
       transform: translateY(0);
     }
+    /* Style for the responsive navbar */
     .mobile-menu-open {
       display: flex !important;
     }
@@ -73,58 +91,315 @@
 
 <body class="bg-[#0b0f19] text-[#e0e7ff]">
 
-  <!-- Navbar -->
-  <header class="sticky top-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md h-20 overflow-visible">
-    <!-- ... your navbar code here ... -->
-  </header>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md h-20 overflow-visible">
+    <div class="container flex items-center justify-between h-full">
+        <!-- Logo -->
+        <a href="#" class="flex-shrink-0 -mt-4"> <!-- negative margin pulls logo up -->
+            <img src="https://i.imgur.com/SLo5a8N.png"
+                 alt="Evolvia Logo"
+                 class="h-36 md:h-44 object-contain"> <!-- bigger logo -->
+</a>
+                    <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#services" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Services</a>
+                <a href="#benefits" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Benefits</a>
+                <a href="#why-us" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Why Us</a>
+                <a href="#integrations" class="text-white hover:text-[#74a5ff] transition-colors duration-300">Integrations</a>
+                <a href="#schedule-call" class="px-6 py-2 bg-gradient-custom rounded-full text-white font-semibold shadow-md hover:scale-105 transform transition-transform duration-300">
+                    Schedule a Demo
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="hidden md:hidden flex-col items-center mt-4 space-y-4 text-white text-lg font-medium">
+            <a href="#services" class="hover:text-[#74a5ff] transition-colors duration-300">Services</a>
+            <a href="#benefits" class="hover:text-[#74a5ff] transition-colors duration-300">Benefits</a>
+            <a href="#why-us" class="hover:text-[#74a5ff] transition-colors duration-300">Why Us</a>
+            <a href="#integrations" class="hover:text-[#74a5ff] transition-colors duration-300">Integrations</a>
+            <a href="#schedule-call" class="px-6 py-2 bg-gradient-custom rounded-full text-white font-semibold shadow-md hover:scale-105 transform transition-transform duration-300 w-max">
+                    Schedule a Demo
+                </a>
+        </nav>
+    </header>
 
-  <main>
-    <!-- Hero -->
-    <!-- Services -->
-    <!-- Benefits -->
-    <!-- Why Us -->
-    <!-- Integrations -->
-    <!-- Schedule Call -->
-    <!-- (all the content you pasted before goes here, unchanged) -->
-  </main>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="py-20 lg:py-32 text-center fade-in">
+            <div class="container">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white mb-6 animate-fade-in-up">
+                    <span class="text-[#74a5ff]">AI Solutions</span> for the Modern Hospitality Experience
+                </h1>
+                <p class="text-base md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto fade-in">
+                    Evolvia Technologies powers your business with intelligent bots that revolutionize guest services, boost efficiency, and drive revenue.
+                </p>
+                <a href="#schedule-call" class="inline-block px-10 py-4 text-lg font-bold text-white bg-gradient-custom rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300">
+                    Schedule a Demo
+                </a>
+            </div>
+        </section>
 
-  <!-- Footer -->
-  <footer class="py-10 text-center text-gray-400">
-    <!-- ... your footer code here ... -->
-  </footer>
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-20 bg-[#0f1524] fade-in">
+            <div class="container">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 text-white">Our Suite of AI Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Chatbot Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Digital Concierge Text Chatbot</h3>
+                        <p class="text-gray-300">
+                            A smart, 24/7 chatbot that handles guest inquiries, upsells services, and provides instant information directly from your website through text messaging and WhatsApp.
+                        </p>
+                    </div>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
+                    <!-- Voice Bot Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a4 4 0 110-8 4 4 0 010 8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Digital Concierge Voice Bot</h3>
+                        <p class="text-gray-300">
+                            Automate your phone lines with an intelligent voice bot that can handle reservations, answer common questions, and route calls with perfect clarity, available in numerous accents and languages.
+                        </p>
+                    </div>
+
+                    <!-- Web-Bot Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18v-8" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">AI Digital Web-Bot</h3>
+                        <p class="text-gray-300">
+                            Seamlessly integrate our web-bot into your online presence to automate website interactions, guide users, and capture leads with precision.
+                        </p>
+                    </div>
+                    
+                    <!-- Smart Dashboard Card -->
+                    <div class="bg-[#1f274a] rounded-3xl p-6 md:p-8 shadow-xl border border-transparent hover:border-[#4c4e9c] transition-all duration-300 transform hover:-translate-y-2 fade-in">
+                        <div class="w-16 h-16 bg-[#4c4e9c] rounded-full flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v-4.5m0 0a3 3 0 01-3-3v-2.25M9 12.75l-3 3-3-3" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 6.75v4.5m0 0a3 3 0 013 3v2.25m-3 0l3-3 3 3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Smart Dashboard</h3>
+                        <p class="text-gray-300">
+                            A free tool with all products that provides instant feedback, live insights, and performance summaries of all bot-guest conversations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="py-16 md:py-20 fade-in">
+            <div class="container">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16 text-white">Key Benefits</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Benefit 1 -->
+                    <div class="flex flex-col items-center text-center fade-in">
+                        <div class="w-20 h-20 flex items-center justify-center text-5xl text-[#74a5ff]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM21 12c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3zM3 12c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-4 text-white">Boost Revenue</h3>
+                        <p class="text-gray-400 mt-2">
+                            Upsell rooms, experiences, and services effortlessly to increase your bottom line.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="flex flex-col items-center text-center fade-in">
+                        <div class="w-20 h-20 flex items-center justify-center text-5xl text-[#74a5ff]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-4 text-white">Streamline Operations</h3>
+                        <p class="text-gray-400 mt-2">
+                            Automate FAQs and routine tasks, freeing up your staff to focus on in-person guest interaction.
+                        </p>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="flex flex-col items-center text-center fade-in">
+                        <div class="w-20 h-20 flex items-center justify-center text-5xl text-[#74a5ff]">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-semibold mt-4 text-white">Enhance Guest Experience</h3>
+                        <p class="text-gray-400 mt-2">
+                            Provide instant, accurate concierge services and information around the clock.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+<section id="why-us" class="py-16 md:py-20 bg-[#0f1524] fade-in">
+  <div class="container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+    <div class="md:w-1/2 text-left fade-in">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">Tailored Solutions & Personal Touch</h2>
+      <p class="text-gray-300 text-lg mb-4">
+        We don't believe in one-size-fits-all. Every Evolvia product is meticulously tailored to fit your business, ensuring a perfect integration and maximum impact.
+      </p>
+      <p class="text-gray-300 text-lg mb-4">
+        Beyond the technology, we provide a personal account manager for every client. This ensures a strong relationship and dedicated support, because we know the human touch is irreplaceable.
+      </p>
+    </div>
+
+    <!-- Founders Section -->
+    <div class="md:w-1/2 flex justify-center fade-in">
+      <div class="p-8 rounded-3xl w-full max-w-lg">
+        <h3 class="text-2xl font-bold text-white mb-4 text-center">Meet the Founders</h3>
+
+        <!-- Zac -->
+        <div class="flex flex-col items-center text-center mb-6">
+          <img src="https://i.imgur.com/a6zsTWD.jpeg" alt="Zac, co-founder of Evolvia" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-[#74a5ff] mb-4">
+          <p class="text-lg font-semibold text-white">
+            <a href="https://www.linkedin.com/in/zac-bacher-025b64203/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center hover:text-[#74a5ff] transition-colors duration-300">
+              Zac (Co-founder)
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" viewBox="0 0 24 24" fill="#0077B5">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.368-1.85 3.601 0 4.266 2.37 4.266 5.451v6.29zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+              </svg>
+            </a>
+          </p>
+          <p class="text-gray-400 mt-1">
+            A visionary with over 6 years of experience serving customers in hotel and related industries. He enjoys being involved and providing oversight to the development team.
+          </p>
+        </div>
+
+        <!-- Jonathan -->
+        <div class="flex flex-col items-center text-center">
+          <img src="https://i.imgur.com/LFdPGP8.jpeg" alt="Jonathan, co-founder of Evolvia" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-[#74a5ff] mb-4">
+          <p class="text-lg font-semibold text-white">
+            <a href="https://www.linkedin.com/in/jonathan-kotzen-775a17192/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center hover:text-[#74a5ff] transition-colors duration-300">
+              Jonathan (Co-founder)
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" viewBox="0 0 24 24" fill="#0077B5">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.85-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.368-1.85 3.601 0 4.266 2.37 4.266 5.451v6.29zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.813 20.452H3.861V9h2.952v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+              </svg>
+            </a>
+          </p>
+          <p class="text-gray-400 mt-1">
+            Driven by a desire to revolutionize the hospitality industry, Jonathan leverages his extensive experience with hotel tech to build strong client relationships and ensure every solution is perfectly tailored.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Integrations Section -->
+        <section id="integrations" class="py-16 md:py-20 fade-in">
+            <div class="container text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Seamless Integration</h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
+                    Our suite of products integrates seamlessly into all major Property Management Systems (PMS). We are constantly expanding our compatibility to make your business more efficient.
+                </p>
+                <div class="flex justify-center items-center flex-wrap gap-8 md:gap-12">
+                    <img src="https://i.imgur.com/VQtNZks.png" alt="Oracle Hospitality placeholder logo" class="h-10">
+                    <img src="https://i.imgur.com/J6eaefk.png" alt="Cloudbeds placeholder logo" class="h-10">
+                    <img src="https://i.imgur.com/LESflo5.png" alt="Opera PMS placeholder logo" class="h-10">
+                    <img src="https://placehold.co/120x40/4c4e9c/ffffff?text=And+More..." alt="Placeholder logo for other PMS systems" class="h-10">
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Call Section -->
+        <section id="schedule-call" class="py-16 md:py-20 bg-[#0f1524] fade-in">
+            <div class="container text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ready to Evolve?</h2>
+                <p class="text-gray-400 text-lg mb-8">
+                    Skip the forms and book a time directly with our team to discuss how Evolvia can transform your guest experience and boost your efficiency.
+                </p>
+                <a href="https://calendly.com/evolviatech/30min" target="_blank" class="inline-block px-10 py-4 text-lg font-bold text-white bg-gradient-custom rounded-full shadow-lg hover:scale-105 transform transition-transform duration-300">
+                    Schedule a Demo
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-gray-400">
+        <div class="container space-y-4">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm">
+                <p>
+                    <span class="font-semibold text-white">Jonathan:</span>
+                    <a href="mailto:jonathan@evolvia.co.za" class="hover:underline">jonathan@evolvia.co.za</a>
+                    <a href="tel:+27790168493" class="hover:underline ml-2">0790168493</a>
+                </p>
+                <p>
+                    <span class="font-semibold text-white">Zac:</span>
+                    <a href="mailto:zac@evolvia.co.za" class="hover:underline">zac@evolvia.co.za</a>
+                    <a href="tel:+27725431358" class="hover:underline ml-2">0725431358</a>
+                </p>
+            </div>
+            <p>&copy; 2025 Evolvia Technologies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-      });
-    });
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('mobile-menu-open');
-    });
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('mobile-menu-open');
+        });
 
-    // Intersection Observer for fade-in
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.2, rootMargin: "0px 0px -50px 0px" });
+        // Intersection Observer for fade-in animations
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2, // Trigger when 20% of the element is visible
+            rootMargin: "0px 0px -50px 0px" // Start a bit earlier
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('is-visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
 
-    faders.forEach(fader => appearOnScroll.observe(fader));
-  </script>
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+
+    </script>
 </body>
 </html>
+
 
 
 
