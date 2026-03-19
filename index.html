@@ -1,132 +1,135 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Evolvia Technologies - AI Solutions</title>
+<title>Evolvia Technologies - AI Solutions for Hospitality and Beyond</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0b0f19;
-      color: #e0e7ff;
-      overflow-x: hidden;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    @media (min-width: 768px) {
-      .container {
-        padding: 0 1.5rem;
-      }
-    }
-    .mobile-menu-open {
-      display: flex !important;
-    }
-    .bg-gradient-custom {
-      background-image: linear-gradient(to right, #4c4e9c, #1f274a);
-    }
-  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0b0f19;
+  color: #e0e7ff;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+.mobile-menu-open {
+  display: flex !important;
+}
+.bg-gradient-custom {
+  background-image: linear-gradient(to right, #4c4e9c, #1f274a);
+}
+</style>
 </head>
 
-<body>
+<body class="bg-[#0b0f19] text-[#e0e7ff]">
 
-<header class="sticky top-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md h-20">
+<header class="sticky top-0 z-50 bg-[#0b0f19]/80 backdrop-blur-md h-20 overflow-visible">
 <div class="container flex items-center justify-between h-full">
+
+<a href="#" class="flex-shrink-0 -mt-4">
 <img src="https://i.imgur.com/SLo5a8N.png" class="h-36 md:h-44 object-contain">
+</a>
+
+<nav class="hidden md:flex space-x-8 text-sm font-medium">
+<a href="#services">Services</a>
+<a href="#benefits">Benefits</a>
+<a href="#why-us">Why Us</a>
+<a href="#integrations">Integrations</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#schedule-call" class="px-6 py-2 bg-gradient-custom rounded-full text-white font-semibold">Schedule a Demo</a>
+</nav>
+
+<button id="mobile-menu-button" class="md:hidden text-white">☰</button>
 </div>
 </header>
 
 <main>
 
-<section class="py-20 lg:py-32 text-center">
+<section class="py-20 text-center">
 <div class="container">
-<h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6">
-AI Solutions for Hospitality
-</h1>
+<h1 class="text-5xl font-bold text-white mb-6">AI Solutions</h1>
 </div>
 </section>
 
-<section class="py-16 md:py-20 bg-[#0f1524]">
-<div class="container">
+<section class="py-16 bg-[#0f1524]">
+<div class="container flex flex-col md:flex-row items-center gap-10">
 
-<h2 class="text-3xl md:text-5xl font-bold text-center mb-16 text-white">
-Meet the Founders
-</h2>
+<div class="md:w-1/2">
+<h2 class="text-4xl font-bold text-white">Meet the Founders</h2>
+</div>
 
-<div class="flex flex-col md:flex-row gap-12 justify-center items-center">
+<div class="md:w-1/2 flex flex-col items-center">
 
-<div class="text-center">
-<img src="https://i.imgur.com/a6zsTWD.jpeg"
-class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-[#74a5ff] mb-4">
-<p class="text-lg font-semibold text-white">Zac (Co-founder)</p>
+<div class="mb-8 text-center">
+<img src="https://i.imgur.com/a6zsTWD.jpeg" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-[#74a5ff] mb-4">
+<p class="font-semibold">Zac</p>
 </div>
 
 <div class="text-center">
-<img src="https://i.imgur.com/LFdPGP8.jpeg"
-class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-[#74a5ff] mb-4">
-<p class="text-lg font-semibold text-white">Jonathan (Co-founder)</p>
+<img src="https://i.imgur.com/LFdPGP8.jpeg" class="rounded-full w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-[#74a5ff] mb-4">
+<p class="font-semibold">Jonathan</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<section class="py-16 md:py-20">
+<section class="py-16">
 <div class="container grid md:grid-cols-3 gap-8">
 
-<div class="bg-[#1f274a] rounded-3xl p-6 text-center">
-<img src="https://i.imgur.com/ddzdDxl.jpeg"
-class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#74a5ff] mb-4 mx-auto">
+<div class="bg-[#1f274a] p-6 rounded-3xl text-center">
+<img src="https://i.imgur.com/ddzdDxl.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#74a5ff] mb-4 mx-auto">
 <p class="font-bold text-white">Leslie P.</p>
 </div>
 
-<div class="bg-[#1f274a] rounded-3xl p-6 text-center">
-<img src="https://i.imgur.com/b4brGaD.jpeg"
-class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#74a5ff] mb-4 mx-auto">
+<div class="bg-[#1f274a] p-6 rounded-3xl text-center">
+<img src="https://i.imgur.com/b4brGaD.jpeg" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-[#74a5ff] mb-4 mx-auto">
 <p class="font-bold text-white">Angelique M.</p>
 </div>
 
-<div class="bg-[#1f274a] rounded-3xl p-6 text-center">
-<img src="https://i.imgur.com/YGKqDX7.jpeg"
-class="w-24 h-24 md:w-32 md:h-32 object-contain border-4 border-[#74a5ff] mb-4 mx-auto">
+<div class="bg-[#1f274a] p-6 rounded-3xl text-center">
+<img src="https://i.imgur.com/YGKqDX7.jpeg" class="w-24 h-24 md:w-32 md:h-32 object-contain border-4 border-[#74a5ff] mb-4 mx-auto">
 <p class="font-bold text-white">Nonius</p>
 </div>
 
 </div>
 </section>
 
-<section class="py-16 md:py-20 text-center bg-[#0f1524]">
-<h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
-Schedule a Demo
-</h2>
-
-<a href="https://calendly.com/evolviatech/30min"
-class="px-10 py-4 bg-gradient-custom text-white rounded-full font-bold">
-Book Now
-</a>
+<section class="py-16 text-center bg-[#0f1524]">
+<h2 class="text-4xl font-bold text-white mb-6">Schedule a Demo</h2>
+<a href="https://calendly.com/evolviatech/30min" class="px-8 py-4 bg-gradient-custom text-white rounded-full font-bold">Book</a>
 </section>
 
 </main>
 
 <script>
-const mobileMenuButton = document.getElementById('mobile-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-if(mobileMenuButton){
-mobileMenuButton.addEventListener('click', () => {
-mobileMenu.classList.toggle('mobile-menu-open');
+const btn = document.getElementById('mobile-menu-button');
+if(btn){
+btn.addEventListener('click', () => {
+document.getElementById('mobile-menu')?.classList.toggle('mobile-menu-open');
 });
 }
 </script>
 
 </body>
 </html>
-
 
 
 
